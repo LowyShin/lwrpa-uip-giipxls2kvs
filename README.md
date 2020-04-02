@@ -28,7 +28,9 @@ If you do, you may see data on your mobile device and use condition of trigger p
         "kvsfactor" : "Factor you want",
         "PathSource" : "xlsx file Directory",
         "FileSource" : "xlsx file Name",
-        "SheetSource" : "Sheet Name"
+        "SheetSource" : "Sheet Name",
+        "GitRepoName" : "lwrpa-uip-giipxls2kvs",
+        "GitRepoURL" : "https://github.com/LowyShin/lwrpa-uip-giipxls2kvs.git"
     }
     ```
 * Run XLS2KVS.xaml on UiPath Studio.
