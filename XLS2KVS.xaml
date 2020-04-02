@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1304,6093</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1304,5923</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>XLS2KVS_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="26">
@@ -62,7 +62,7 @@
       <AssemblyReference>System.ServiceModel</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="XLS2KVS" sap:VirtualizedContainerService.HintSize="1314,6028" sap2010:WorkflowViewState.IdRef="Sequence_5">
+  <Sequence DisplayName="XLS2KVS" sap:VirtualizedContainerService.HintSize="1314,5858" sap2010:WorkflowViewState.IdRef="Sequence_5">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="sPathSource" />
       <Variable x:TypeArguments="ui:GenericValue" Name="sPathTarget" />
@@ -333,9 +333,9 @@
         <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;NoFile...&quot;]" />
       </If.Else>
     </If>
-    <If Condition="[sKVSFull &lt;&gt; &quot;&quot;]" sap:VirtualizedContainerService.HintSize="1272,1821" sap2010:WorkflowViewState.IdRef="If_2">
+    <If Condition="[sKVSFull &lt;&gt; &quot;&quot;]" sap:VirtualizedContainerService.HintSize="1272,1651" sap2010:WorkflowViewState.IdRef="If_2">
       <If.Then>
-        <Sequence sap:VirtualizedContainerService.HintSize="975,1673" sap2010:WorkflowViewState.IdRef="Sequence_4">
+        <Sequence sap:VirtualizedContainerService.HintSize="899,1503" sap2010:WorkflowViewState.IdRef="Sequence_4">
           <Sequence.Variables>
             <Variable x:TypeArguments="x:String" Name="sApplyLink" />
             <Variable x:TypeArguments="njl:JObject" Name="joGiipConf" />
@@ -348,7 +348,7 @@
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Assign sap:VirtualizedContainerService.HintSize="933,60" sap2010:WorkflowViewState.IdRef="Assign_16">
+          <Assign sap:VirtualizedContainerService.HintSize="857,60" sap2010:WorkflowViewState.IdRef="Assign_16">
             <Assign.To>
               <OutArgument x:TypeArguments="x:String">[sKVSFull]</OutArgument>
             </Assign.To>
@@ -356,8 +356,8 @@
               <InArgument x:TypeArguments="x:String">["[" + sKVSFull + "]"]</InArgument>
             </Assign.Value>
           </Assign>
-          <ui:Replace DisplayName="Replace &quot; to %22" sap:VirtualizedContainerService.HintSize="933,59" sap2010:WorkflowViewState.IdRef="Replace_3" Input="[sKVSFull]" IsBuilderTabModified="False" Pattern="[&quot;&quot;&quot;&quot;]" RegexOption="IgnoreCase, Compiled" Replacement="%22" Result="[sKVSFull]" />
-          <Assign sap2010:Annotation.AnnotationText="Debugging!! replace URL after debuging/..." sap:VirtualizedContainerService.HintSize="933,102" sap2010:WorkflowViewState.IdRef="Assign_4">
+          <ui:Replace DisplayName="Replace &quot; to %22" sap:VirtualizedContainerService.HintSize="857,59" sap2010:WorkflowViewState.IdRef="Replace_3" Input="[sKVSFull]" IsBuilderTabModified="False" Pattern="[&quot;&quot;&quot;&quot;]" RegexOption="IgnoreCase, Compiled" Replacement="%22" Result="[sKVSFull]" />
+          <Assign sap2010:Annotation.AnnotationText="Debugging!! replace URL after debuging/..." sap:VirtualizedContainerService.HintSize="857,102" sap2010:WorkflowViewState.IdRef="Assign_4">
             <Assign.To>
               <OutArgument x:TypeArguments="x:String">[lwURLKVS]</OutArgument>
             </Assign.To>
@@ -370,49 +370,38 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </Assign>
-          <ui:Replace sap:VirtualizedContainerService.HintSize="933,59" sap2010:WorkflowViewState.IdRef="Replace_2" Input="[lwURLKVS]" IsBuilderTabModified="False" Pattern="#" RegexOption="IgnoreCase, Compiled" Replacement="&amp;lwsharp;" Result="[lwURLKVS]" />
-          <If Condition="[len(lwURLKVS) &gt; 2048]" sap:VirtualizedContainerService.HintSize="933,1141" sap2010:WorkflowViewState.IdRef="If_1">
+          <ui:Replace sap:VirtualizedContainerService.HintSize="857,59" sap2010:WorkflowViewState.IdRef="Replace_2" Input="[lwURLKVS]" IsBuilderTabModified="False" Pattern="#" RegexOption="IgnoreCase, Compiled" Replacement="&amp;lwsharp;" Result="[lwURLKVS]" />
+          <If Condition="[len(lwURLKVS) &gt; 2048]" sap:VirtualizedContainerService.HintSize="857,971" sap2010:WorkflowViewState.IdRef="If_1">
             <If.Then>
               <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;[&quot; + Now.ToString(&quot;yyyy-MM-dd hh:mm:ss&quot;) + &quot;] Job to KVS... [&quot; + nRstCode.ToString + &quot; / &quot; + Len(sRstHttp).ToString + &quot;] Skip to KVS log too long data&quot;]" />
             </If.Then>
             <If.Else>
-              <Sequence sap:VirtualizedContainerService.HintSize="554,993" sap2010:WorkflowViewState.IdRef="Sequence_3">
+              <Sequence sap:VirtualizedContainerService.HintSize="478,823" sap2010:WorkflowViewState.IdRef="Sequence_3">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="512,507" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="[lwURLKVS]">
+                <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="436,337" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="[lwURLKVS]">
                   <ui:OpenBrowser.Body>
                     <ActivityAction x:TypeArguments="x:Object">
                       <ActivityAction.Argument>
                         <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                       </ActivityAction.Argument>
-                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="478,408" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="242,238" sap2010:WorkflowViewState.IdRef="Sequence_10">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:MinimizeWindow Window="{x:Null}" DisplayName="Minimize Window" sap:VirtualizedContainerService.HintSize="436,22" sap2010:WorkflowViewState.IdRef="MinimizeWindow_1" />
-                        <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="436,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
-                        <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="436,192" sap2010:WorkflowViewState.IdRef="CommentOut_2">
-                          <ui:CommentOut.Body>
-                            <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="242,114" sap2010:WorkflowViewState.IdRef="Sequence_12">
-                              <sap:WorkflowViewStateService.ViewState>
-                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                </scg:Dictionary>
-                              </sap:WorkflowViewStateService.ViewState>
-                              <ui:CloseTab Browser="{x:Null}" DisplayName="Close Tab" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="CloseTab_1" />
-                            </Sequence>
-                          </ui:CommentOut.Body>
-                        </ui:CommentOut>
+                        <ui:MinimizeWindow Window="{x:Null}" DisplayName="Minimize Window" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="MinimizeWindow_1" />
+                        <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
+                        <ui:CloseTab Browser="{x:Null}" DisplayName="Close Tab" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="CloseTab_1" />
                       </Sequence>
                     </ActivityAction>
                   </ui:OpenBrowser.Body>
                 </ui:OpenBrowser>
-                <ui:CommentOut sap2010:Annotation.AnnotationText="Blocked format on Azure app service, . " DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="512,223" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                <ui:CommentOut sap2010:Annotation.AnnotationText="Blocked format on Azure app service, . " DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="436,223" sap2010:WorkflowViewState.IdRef="CommentOut_1">
                   <ui:CommentOut.Body>
                     <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="242,114" sap2010:WorkflowViewState.IdRef="Sequence_11">
                       <sap:WorkflowViewStateService.ViewState>
@@ -445,7 +434,7 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </ui:CommentOut>
-                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="512,91" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;[&quot; + Now.ToString(&quot;yyyy-MM-dd hh:mm:ss&quot;) + &quot;] Job to KVS... [&quot; + nRstCode.ToString + &quot; / &quot; + Len(sRstHttp).ToString + &quot;] KVS Data : &quot; + lwURLKVS]" />
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="436,91" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;[&quot; + Now.ToString(&quot;yyyy-MM-dd hh:mm:ss&quot;) + &quot;] Job to KVS... [&quot; + nRstCode.ToString + &quot; / &quot; + Len(sRstHttp).ToString + &quot;] KVS Data : &quot; + lwURLKVS]" />
               </Sequence>
             </If.Else>
           </If>
