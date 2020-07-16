@@ -35,3 +35,4 @@ If you do, you may see data on your mobile device and use condition of trigger p
     ```
 * Run XLS2KVS.xaml on UiPath Studio.
 * See Logical server detail page or KVS log page.
+* [Get Last KVS data](https://github.com/LowyShin/giip/wiki/getKVSFactorLast)
